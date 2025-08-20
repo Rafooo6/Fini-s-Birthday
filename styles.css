@@ -203,6 +203,14 @@ body {
     text-align: center;
   }
 
+    .overlay {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    text-align: center;
+  }
+
   .right h1 {
     font-size: 18px;
   }
@@ -221,9 +229,12 @@ body {
   }
 
   #countdown {
+    display: flex;
     flex-direction: row;
-    gap: 10px;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    gap: 10px;
   }
 
   #countdown div {
