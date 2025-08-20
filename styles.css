@@ -2,33 +2,32 @@ body {
   margin: 0;
   font-family: 'Georgia', serif;
   background-color: #fffaf4;
-  display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
+/* --- CARD --- */
 .card {
   position: relative;
-  width: 400px;
-  height: 500px;
-  background: url("assets/maritini 2.png") no-repeat center top; /* 👈 centrada arriba */
-  background-size: cover;
+  width: 100%;
+  min-height: 60vh; /* altura mínima adaptable */
+  background: url("assets/maritini 2.png") no-repeat center top;
+  background-size: cover; /* mantiene proporción */
+  background-position: center;
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   overflow: hidden;
   opacity: 0;
   transform: scale(0.9);
   transition: all 1s ease;
-  padding: 100px;
 }
-
 
 .card.show {
   opacity: 1;
   transform: scale(1);
 }
 
+/* --- OVERLAY --- */
 .overlay {
   position: relative;
   width: 100%;
@@ -36,11 +35,11 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-left: 40px;
+  padding-right: 14%;
   box-sizing: border-box;
-
 }
 
+/* --- TEXTOS --- */
 .right {
   text-align: left;
   max-width: 50%;
@@ -81,7 +80,7 @@ body {
   color: #4a6926;
 }
 
-/* Animaciones al entrar */
+/* Animaciones */
 .card.show .right h1,
 .card.show .right h2,
 .card.show .right p {
@@ -89,16 +88,13 @@ body {
   transform: translateX(0);
 }
 
+/* --- MAPA --- */
 .map-container {
   position: relative;
-  width: 100%;
-  max-width: 800px; /* ancho máximo */
-  height: 0;
+  width: 80%;
   padding-bottom: 56.25%; /* relación 16:9 */
   margin: auto;
-  border-radius: 12px; /* bordes redondeados */
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* sombra elegante */
+  border-radius: 12px;
 }
 
 .map-container iframe {
@@ -106,7 +102,72 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 50%;
   border: 0;
 }
 
+/* --- CONTENT EXTRA --- */
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+/* 📱 Responsivo Tablet */
+@media (max-width: 768px) {
+  .overlay {
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .right {
+    max-width: 90%;
+    padding-top: 100px;
+  }
+
+  .right h1 {
+    font-size: 22px;
+  }
+
+  .right h2 {
+    font-size: 40px;
+  }
+
+  .right p {
+    font-size: 14px;
+  }
+
+  .card {
+    min-height: 50vh;
+    background-position: center; /* centra mejor la imagen */
+  }
+
+  .map-container {
+    width: 95%;
+  }
+}
+
+/* 📱 Muy pequeño (pantallas menores a 480px) */
+@media (max-width: 480px) {
+  .right {
+    padding-top: 60px;
+  }
+
+  .right h1 {
+    font-size: 18px;
+  }
+
+  .right h2 {
+    font-size: 32px;
+  }
+
+  .right p {
+    font-size: 12px;
+  }
+
+  .card {
+    min-height: 40vh;
+    background-position: center center; /* centra más aún en mobile */
+  }
+}
