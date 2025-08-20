@@ -10,9 +10,9 @@ body {
 .card {
   position: relative;
   width: 100%;
-  min-height: 60vh; /* altura mínima adaptable */
+  min-height: 60vh; /* altura adaptable */
   background: url("assets/maritini 2.png") no-repeat center top;
-  background-size: cover; /* mantiene proporción */
+  background-size: cover;
   background-position: center;
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   overflow: hidden;
@@ -43,7 +43,7 @@ body {
   text-align: left;
   max-width: 50%;
   padding-top: 200px;
-  padding-left: 300px;
+  padding-left: 300px; /* 👉 este se ajusta en mobile */
 }
 
 .right h1 {
@@ -102,7 +102,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 50%;
+  height: 100%;
   border: 0;
 }
 
@@ -123,8 +123,8 @@ body {
 
   .right {
     max-width: 90%;
-    padding-top: 200px;
-    
+    padding-top: 120px;
+    padding-left: 0; /* 👉 quitamos el padding fijo */
   }
 
   .right h1 {
@@ -141,7 +141,7 @@ body {
 
   .card {
     min-height: 50vh;
-    background-position: center; /* centra mejor la imagen */
+    background-position: center;
   }
 
   .map-container {
@@ -152,7 +152,9 @@ body {
 /* 📱 Muy pequeño (pantallas menores a 480px) */
 @media (max-width: 480px) {
   .right {
-    padding-top: 60px;
+    padding-top: 80px;
+    padding-left: 0; /* 👉 asegura que no se descuadre */
+    text-align: center;
   }
 
   .right h1 {
@@ -160,7 +162,7 @@ body {
   }
 
   .right h2 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .right p {
@@ -169,8 +171,6 @@ body {
 
   .card {
     min-height: 40vh;
-    background-position: center center; /* centra más aún en mobile */
+    background-position: center center;
   }
 }
-
-/* --- FOOTER --- */
