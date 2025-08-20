@@ -6,14 +6,12 @@ body {
   align-items: center;
 }
 
+
 /* --- CARD --- */
 .card {
   position: relative;
   width: 100%;
   min-height: 70vh;
-  background: url("assets/studio.png") no-repeat center top;
-  background-size: 80%;
-  background-position:  left;
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   overflow: hidden;
   opacity: 0;
@@ -147,12 +145,6 @@ body {
 
 /* 📱 Responsivo Tablet */
 @media (max-width: 768px) {
-  .overlay {
-    flex-direction: column;
-    justify-content: center;
-    padding-right: 0;
-    text-align: center;
-  }
 
   .right {
     max-width: 90%;
@@ -175,8 +167,12 @@ body {
   }
 
   .card {
-    min-height: 50vh;
+    min-height: 100vh;
     background-position: center;
+  }
+
+  .card img {
+    width: 100%;
   }
 
   .map-container {
@@ -209,6 +205,8 @@ body {
     align-items: center;
     padding: 0;
     text-align: center;
+    width: 100%;
+    
   }
 
   .right h1 {
@@ -224,8 +222,8 @@ body {
   }
 
   .card {
-    min-height: 40vh;
     background-position: center center;
+    height: 100vh;
   }
 
   #countdown {
