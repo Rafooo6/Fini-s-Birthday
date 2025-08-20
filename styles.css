@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #fffaf4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  background: url("assets/maritini 2.png") no-repeat center top; /* 👈 centrada arriba */
+  background-size: cover;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  overflow: hidden;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 1s ease;
+  padding: 100px;
+}
+
+
+.card.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 40px;
+  box-sizing: border-box;
+
+}
+
+.right {
+  text-align: left;
+  max-width: 50%;
+  padding-top: 200px;
+}
+
+.right h1 {
+  font-size: 28px;
+  color: #4a6926;
+  margin: 0;
+  line-height: 1.2;
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 1s ease;
+}
+
+.right h2 {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 60px;
+  color: #6b8e23;
+  margin: 5px 0 15px;
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 1s ease 0.2s;
+}
+
+.right p {
+  font-size: 16px;
+  color: #333;
+  margin: 6px 0;
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 1s ease 0.4s;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #4a6926;
+}
+
+/* Animaciones al entrar */
+.card.show .right h1,
+.card.show .right h2,
+.card.show .right p {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* ancho máximo */
+  height: 0;
+  padding-bottom: 56.25%; /* relación 16:9 */
+  margin: auto;
+  border-radius: 12px; /* bordes redondeados */
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* sombra elegante */
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
