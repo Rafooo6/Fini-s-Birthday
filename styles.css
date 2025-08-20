@@ -10,10 +10,10 @@ body {
 .card {
   position: relative;
   width: 100%;
-  min-height: 60vh;
-  background: url("assets/maritini\ 2.png") no-repeat center top;
-  background-size: cover;
-  background-position: center;
+  min-height: 70vh;
+  background: url("assets/studio.png") no-repeat center top;
+  background-size: 80%;
+  background-position:  left;
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   overflow: hidden;
   opacity: 0;
