@@ -112,6 +112,41 @@ body {
   text-align: center;
 }
 
+/* --- CONTADOR --- */
+.countdown-container {
+  margin: 30px auto;
+  text-align: center;
+}
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+#countdown div {
+  padding: 15px;
+  /*Cambiar*/
+  background: #f3f3f3;
+  border-radius: 10px;
+  min-width: 70px;
+  
+}
+
+#countdown span {
+  font-size: 22px;
+  font-weight: bold;
+  display: block;
+  color: #4a6926;
+}
+
+#countdown p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
 /* 📱 Responsivo Tablet */
 @media (max-width: 768px) {
   .overlay {
@@ -124,7 +159,6 @@ body {
   .right {
     max-width: 90%;
     padding-top: 120px;
-    padding-left: 0; /* 👉 quitamos el padding fijo */
   }
 
   .right h1 {
@@ -147,14 +181,23 @@ body {
   .map-container {
     width: 95%;
   }
+
+  #countdown {
+    gap: 10px;
+  }
+
+  #countdown div {
+    min-width: 60px;
+    padding: 10px;
+  }
 }
 
 /* 📱 Muy pequeño (pantallas menores a 480px) */
 @media (max-width: 480px) {
   .right {
     padding-top: 80px;
-    padding-left: 0; /* 👉 asegura que no se descuadre */
-    text-align: center;
+    padding-left: 300px;
+   
   }
 
   .right h1 {
@@ -172,5 +215,18 @@ body {
   .card {
     min-height: 40vh;
     background-position: center center;
+  }
+
+  #countdown div {
+    min-width: 50px;
+    padding: 8px;
+  }
+
+  #countdown span {
+    font-size: 18px;
+  }
+
+  #countdown p {
+    font-size: 12px;
   }
 }
